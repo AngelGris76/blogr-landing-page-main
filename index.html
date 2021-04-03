@@ -18,65 +18,69 @@
         <header class="header">
             <img src="assets/images/logo.svg" alt="Blogr logo" class="logo">
             <nav class="main-menu" id="main-menu">
-                <ul class="main-menu__list" id="main-menuList">
-                    <li class="main-menu__item">
-                        <a href="#" class="main-menu__link">Product</a>
-                        <ul class="main-submenu">
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Overview</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Pricing</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Marketplace</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Features</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Integrations</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="#" class="main-menu__link">Company</a>
-                        <ul class="main-submenu">
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">About</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Team</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Blog</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Careers</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="#" class="main-menu__link">Connect</a>
-                        <ul class="main-submenu">
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Contact</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">Newsletter</a>
-                            </li>
-                            <li class="main-submenu__item">
-                                <a href="#" class="main-submenu__link">LinkedIn</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="#" class="main-menu__link">Login</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="#" class="main-menu__link">Sign Up</a>
-                    </li>
-                </ul>
+                <div class="menu-container" id="menu-container">
+                    <ul class="main-menu__list" id="main-menuList">
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link">Product</a>
+                            <ul class="main-submenu hide-submenu">
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Overview</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Pricing</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Marketplace</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Features</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Integrations</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link">Company</a>
+                            <ul class="main-submenu hide-submenu">
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">About</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Team</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Blog</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Careers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link">Connect</a>
+                            <ul class="main-submenu hide-submenu">
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Contact</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">Newsletter</a>
+                                </li>
+                                <li class="main-submenu__item">
+                                    <a href="#" class="main-submenu__link">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="button__list">
+                        <li class="button__item ">
+                            <a href="#" class="button__link button__link--login">Login</a>
+                        </li>
+                        <li class="button__item">
+                            <a href="#" class="button__link button__link--signup">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <h1 class="intro__title">
@@ -86,10 +90,10 @@
             Grow your audience and build your online brand
         </p>
         <div class="button-container">
-            <a href="#" class="intro__button intro__button--start">
+            <a href="#" class="intro__button intro__button--start" aria-label="start a free trial of our product">
                 Start for Free
             </a>
-            <a href="#" class="intro__button intro__button--learn">
+            <a href="#" class="intro__button intro__button--learn" aria-label="learn moore about our product">
                 Learn More
             </a>
         </div>
