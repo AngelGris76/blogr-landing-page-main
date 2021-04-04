@@ -9,13 +9,35 @@ const isSubMenu = (element) =>
         return false;
 }
 
+const hideSubMenus = () =>
+{
+    for (const subMenu of subMenus) 
+    {
+        subMenu.classList.add('hide-submenu')
+        subMenu.previousElementSibling.classList.remove('main-menu__link--expanded')
+    }
+}
+
+const isHide = (subMenu) =>
+{
+    if (subMenu.nextElementSibling.classList.contains('hide-submenu')) return true;
+    else
+        return false;
+}
+
 mainMenu.addEventListener('click', (e) =>
 {
     if (e.target.tagName === 'NAV') e.target.children[0].classList.toggle('menu-container--show');
     if (isSubMenu(e.target))
     {
-        e.target.nextElementSibling.classList.toggle('hide-submenu');
-        e.target.classList.toggle('main-menu__link--expanded')
+        let hideState = isHide(e.target);
+        hideSubMenus();
+
+        if (hideState === true)
+        {
+            e.target.nextElementSibling.classList.remove('hide-submenu');
+            e.target.classList.add('main-menu__link--expanded')
+        }
     }
 });
 
@@ -25,10 +47,6 @@ menuContainer.addEventListener('transitionend', (e) =>
     e.target.parentElement.parentElement.parentElement.classList.toggle('intro--show');
     if (!mainMenu.classList.contains('main-menu-show'))
     {
-        for (const subMenu of subMenus) 
-        {
-            subMenu.classList.add('hide-submenu')
-            subMenu.previousElementSibling.classList.remove('main-menu__link--expanded')
-        }
+        hideSubMenus();   
     }
 });
